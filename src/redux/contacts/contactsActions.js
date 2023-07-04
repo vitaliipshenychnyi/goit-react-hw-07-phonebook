@@ -1,14 +1,16 @@
-import { createAction } from '@reduxjs/toolkit';
+// Без AsyncThunk
 
-// pending
-export const fetchContactsRequest = createAction(
-  'contacts/fetchContactsRequest'
-);
+// import { createAction } from '@reduxjs/toolkit';
 
-// fulfilled
-export const fetchContactsSuccess = createAction(
-  'contacts/fetchContactsSuccess'
-);
+// // pending
+// export const fetchContactsRequest = createAction(
+//   'contacts/fetchContactsRequest'
+// );
 
-// rejected
-export const fetchContactsError = createAction('contacts/fetchContactsError');
+// // fulfilled
+// export const fetchContactsSuccess = createAction(
+//   'contacts/fetchContactsSuccess'
+// );
+
+// // rejected
+// export const fetchContactsError = createAction('contacts/fetchContactsError');
