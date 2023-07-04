@@ -1,7 +1,7 @@
 import { ContactForm } from './contactForm/ContactForm';
 import { ContactsList } from './contactList/ContactList';
 import { Container } from './App.styled';
-import { Filter } from './filter/Filter';
+// import { Filter } from './filter/Filter';
 
 import { useSelector } from 'react-redux';
 

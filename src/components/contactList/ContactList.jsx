@@ -2,14 +2,14 @@ import { ListOfContact, ContactItem } from './ContactList.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { remove } from 'redux/contacts/contactsSlice';
 
-import * as contactsOperations from '../../redux/contacts/contactsOperations';
+import { contactsOperations, contactsSelectors } from 'redux/contacts';
 import { useEffect } from 'react';
 
 export const ContactsList = () => {
   const dispatch = useDispatch();
 
   // отримання переліку контактів
-  const contacts = useSelector(state => state.contacts.entities);
+  const contacts = useSelector(contactsSelectors.contactsArr);
   console.log(contacts);
 
   const visibleContacts = contacts;

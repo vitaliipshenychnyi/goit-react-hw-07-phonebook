@@ -12,7 +12,3 @@ export const fetchContactsSuccess = createAction(
 
 // rejected
 export const fetchContactsError = createAction('contacts/fetchContactsError');
-
-// contacts/fetchAll
-// contacts/addContact
-// contacts/deleteContact
