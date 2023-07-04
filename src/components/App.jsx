@@ -13,10 +13,10 @@ export const App = () => {
     <Container>
       <h1>Phonebook</h1>
       <ContactForm />
-
+      
       <h2>Contacts:</h2>
-      <Filter />
-      {contacts.items.length !== 0 && <ContactsList />}
+      {/* <Filter /> */}
+      {contacts.length !== 0 && <ContactsList />}
     </Container>
   );
 };
