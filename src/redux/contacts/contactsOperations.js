@@ -13,6 +13,12 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
+// !!!!!!!!!!!!!!! наступні операції
+
+// addContact 
+
+// deleteContact 
+
 // *************************************************************
 
 // Без AsyncThunk

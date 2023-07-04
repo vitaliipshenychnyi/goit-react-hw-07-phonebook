@@ -1,7 +1,7 @@
 import { createReducer, combineReducers } from '@reduxjs/toolkit';
 import { fetchContacts } from './contactsOperations';
 
-const entities = createReducer([], {
+const items = createReducer([], {
   [fetchContacts.fulfilled]: (_, action) => action.payload,
 });
 
@@ -16,7 +16,7 @@ const error = createReducer(null, {
   [fetchContacts.pending]: () => null,
 });
 
-export default combineReducers({ entities, isLoading, error });
+export default combineReducers({ items, isLoading, error });
 
 // *************************************************************
 

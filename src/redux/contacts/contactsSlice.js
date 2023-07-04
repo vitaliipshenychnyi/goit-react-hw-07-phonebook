@@ -1,9 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
+// import { fetchContacts } from './contactsOperations';
 
 export const contactsSlice = createSlice({
   name: 'contacts',
   initialState: { items: [], isLoading: false, error: null },
-  reducers: {},
+
+  // extraReducers: {
+  //   [fetchContacts.fulfilled]: (state, action) => {
+  //     return { ...state, items: action.payload };
+  //   },
+  // },
 });
 
 export const { add, remove } = contactsSlice.actions;
