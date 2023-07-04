@@ -1,11 +1,15 @@
 import { getContacts } from 'api';
- import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/fetchContacts',
-  async () => {
-    const contacts = await getContacts();
-    return contacts;
+  async (_, { rejectWithValue }) => {
+    try {
+      const contacts = await getContacts();
+      return contacts;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
   }
 );
 
