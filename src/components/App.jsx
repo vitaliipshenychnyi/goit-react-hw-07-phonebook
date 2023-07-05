@@ -1,7 +1,7 @@
 import { ContactForm } from './contactForm/ContactForm';
 import { ContactsList } from './contactList/ContactList';
 import { Container } from './App.styled';
-// import { Filter } from './filter/Filter';
+import { Filter } from './filter/Filter';
 
 import { useSelector } from 'react-redux';
 
@@ -13,9 +13,9 @@ export const App = () => {
     <Container>
       <h1>Phonebook</h1>
       <ContactForm />
-      
+
       <h2>Contacts:</h2>
-      {/* <Filter /> */}
+      <Filter />
       {contacts.length !== 0 && <ContactsList />}
     </Container>
   );
