@@ -7,12 +7,10 @@ export const getContacts = async () => {
   return response.data;
 };
 
-export const postContact = async () => {
-  const response = await axios.post(`${BASE_URL}/contacts`);
-  return response.data;
+export const postContact = async newContact => {
+  await axios.post(`${BASE_URL}/contacts`, newContact);
 };
 
-export const deleteContacts = async () => {
-  const response = await axios.delete(`${BASE_URL}/contacts/:id`);
-  return response.data;
+export const delContact = async contactId => {
+  await axios.delete(`${BASE_URL}/contacts/${contactId}`);
 };
