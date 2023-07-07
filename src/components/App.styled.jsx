@@ -18,4 +18,10 @@ export const Container = styled.section`
         font-size: 32px;
         font-weight: 700;
     }
+    p{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
 `;

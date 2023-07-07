@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import 'react-native-get-random-values';
-// import { nanoid } from 'nanoid';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/contactsSlice';
-
 import {
   FormWrapper,
   ButtonAdd,
   TitleInput,
   InputField,
 } from './ContactForm.styled';
+import { selectContacts } from 'redux/selectors/selectors';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
@@ -36,7 +34,7 @@ export const ContactForm = () => {
     }
   };
 
-  const contacts = useSelector(state => state.contacts.items);
+  const contacts = useSelector(selectContacts);
 
   // функція відправки даних до state
   const handleSubmit = event => {

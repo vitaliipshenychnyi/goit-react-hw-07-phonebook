@@ -1,8 +1,7 @@
 import { TitleFindInput, InputFindField } from './Filter.styled';
-
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { change } from 'redux/filter/filterSlice';
+import { selectFilterValue } from 'redux/selectors/selectors';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -12,7 +11,7 @@ export const Filter = () => {
     dispatch(change(event.currentTarget.value));
   };
 
-  const value = useSelector(state => state.filter.value); // отримання значення тексту із state
+  const value = useSelector(selectFilterValue); // отримання значення тексту із state
 
   return (
     <TitleFindInput>
